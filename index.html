@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>استراتيجية الإطلاق وإدارة النمو التجاري | مركز العناية الرجالية والإسبا الفاخر — مكة المكرمة</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Cairo & IBM Plex Sans Arabic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kaaf: {
+                            gold: '#D4AF37',
+                            goldLight: '#F3E5AB',
+                            goldDark: '#997A15',
+                            onyx: '#090B0E',
+                            darkSlate: '#0D1117',
+                            cardBg: '#121824',
+                            border: '#212D40',
+                            blueDeep: '#081326',
+                            cyan: '#06B6D4',
+                            cyanLight: '#67E8F9',
+                            emerald: '#059669',
+                            emeraldLight: '#34D399',
+                            purple: '#7C3AED',
+                            purpleLight: '#C4B5FD',
+                            rose: '#E11D48',
+                            amber: '#F59E0B'
+                        }
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                        ibm: ['IBM Plex Sans Arabic', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'glow-gold': '0 0 45px -10px rgba(212, 175, 55, 0.45)',
+                        'glow-cyan': '0 0 45px -10px rgba(6, 182, 212, 0.4)',
+                        'glow-emerald': '0 0 45px -10px rgba(5, 150, 105, 0.4)',
+                        'web-card': '0 25px 50px -12px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(255, 255, 255, 0.08)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Cairo', 'IBM Plex Sans Arabic', sans-serif;
+            background-color: #05070A;
+            color: #E2E8F0;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Ambient Luxury Particle Background */
+        #interactive-bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.75;
+        }
+
+        /* Top Accent Ribbon */
+        .kaaf-luxury-ribbon {
+            background: linear-gradient(90deg, 
+                #090B0E 0%, 
+                #D4AF37 30%, 
+                #06B6D4 50%, 
+                #059669 70%, 
+                #7C3AED 90%, 
+                #D4AF37 100%
+            );
+            height: 4px;
+        }
+
+        /* Glassmorphic Cards */
+        .web-card-gold {
+            background: linear-gradient(135deg, rgba(28, 23, 12, 0.92) 0%, rgba(12, 10, 5, 0.97) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            backdrop-filter: blur(16px);
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .web-card-gold:hover {
+            border-color: rgba(212, 175, 55, 0.85);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -10px rgba(212, 175, 55, 0.35);
+        }
+
+        .web-card-dark {
+            background: linear-gradient(135deg, rgba(18, 24, 36, 0.88) 0%, rgba(9, 13, 20, 0.96) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(14px);
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .web-card-dark:hover {
+            border-color: rgba(6, 182, 212, 0.6);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -10px rgba(6, 182, 212, 0.25);
+        }
+
+        .web-card-emerald {
+            background: linear-gradient(135deg, rgba(6, 32, 22, 0.9) 0%, rgba(3, 16, 11, 0.97) 100%);
+            border: 1px solid rgba(5, 150, 105, 0.4);
+            backdrop-filter: blur(14px);
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .web-card-emerald:hover {
+            border-color: rgba(52, 211, 153, 0.85);
+            box-shadow: 0 20px 40px -10px rgba(5, 150, 105, 0.35);
+        }
+
+        .web-card-purple {
+            background: linear-gradient(135deg, rgba(28, 18, 48, 0.9) 0%, rgba(12, 8, 24, 0.97) 100%);
+            border: 1px solid rgba(124, 58, 237, 0.4);
+            backdrop-filter: blur(14px);
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Floating Animation */
+        @keyframes float-alive-left {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-8px) rotate(1deg); }
+        }
+
+        .animate-floating-kaaf {
+            animation: float-alive-left 4s ease-in-out infinite;
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.2s;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background: #D4AF37;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-kaaf-gold selection:text-black">
+
+    <!-- INTERACTIVE BACKGROUND CANVAS -->
+    <canvas id="interactive-bg-canvas"></canvas>
+
+    <!-- TOP NAVIGATION HEADER -->
+    <header id="top-nav" class="sticky top-0 z-50 bg-kaaf-onyx/90 backdrop-blur-xl border-b border-kaaf-border/80 px-4 lg:px-10 py-3.5 transition-all">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <!-- Brand Identity -->
+            <a href="https://kaafmarketing.sa/" target="_blank" class="flex items-center gap-3.5 group">
+                <div class="w-11 h-11 rounded-2xl overflow-hidden border border-kaaf-gold/50 p-0.5 bg-black shrink-0 shadow-glow-gold transition-transform group-hover:scale-105">
+                    <img src="https://i.ibb.co/qLQcG9vr/Whats-App-Image-2026-08-26-at-11-29-58.jpg" alt="KAAF Marketing Logo" class="w-full h-full object-cover rounded-xl">
+                </div>
+                <div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-sm font-black text-white tracking-wide font-ibm">KAAF Launch Advisory</span>
+                        <span class="px-2.5 py-0.5 rounded-full bg-kaaf-gold/20 text-kaaf-goldLight text-[10px] font-extrabold border border-kaaf-gold/40">Makkah Luxury Grooming</span>
+                    </div>
+                    <p class="text-[11px] text-gray-400">استراتيجية إطلاق وتأسيس نمو المبيعات والحجوزات</p>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden xl:flex items-center gap-6 text-xs font-bold text-gray-300">
+                <a href="#summary" class="nav-link hover:text-white">الملخص التنفيذي</a>
+                <a href="#challenge" class="nav-link hover:text-white">التحدي والحل</a>
+                <a href="#positioning" class="nav-link hover:text-white">التموضع التجاري</a>
+                <a href="#framework" class="nav-link hover:text-white">المراحل الـ5</a>
+                <a href="#influencers" class="nav-link hover:text-white">منظومة المؤثرين</a>
+                <a href="#content" class="nav-link hover:text-white">صناعة المحتوى</a>
+                <a href="#ads" class="nav-link hover:text-white">الحملات والإعلانات</a>
+                <a href="#local-seo" class="nav-link hover:text-white">Google & Local</a>
+                <a href="#automation" class="nav-link hover:text-white">الأتمتة والـ CRM</a>
+                <a href="#seasonality" class="nav-link hover:text-white">رمضان والعيد</a>
+                <a href="#packages" class="nav-link hover:text-white">الباقات</a>
+                <a href="#kpi" class="px-3 py-1.5 rounded-full bg-kaaf-gold/20 text-kaaf-goldLight font-black border border-kaaf-gold/50 hover:bg-kaaf-gold/30 transition">KPIs</a>
+            </nav>
+
+            <!-- Action Button -->
+            <div class="flex items-center gap-2">
+                <a href="#closing" class="px-4 py-2 rounded-xl bg-gradient-to-r from-kaaf-gold to-amber-500 text-slate-950 font-black text-xs hover:brightness-110 shadow-glow-gold transition">
+                    <span>اعتماد خطة الإطلاق</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- FLOATING KAAF LOGO BUTTON (BOTTOM LEFT) -->
+    <aside id="floating-kaaf-btn" class="fixed bottom-6 left-6 z-50">
+        <a href="https://kaafmarketing.sa/" target="_blank" title="KAAF Strategic Launch Advisory" class="block w-14 h-14 rounded-full overflow-hidden border-2 border-kaaf-gold p-0.5 bg-black/90 animate-floating-kaaf transition-transform hover:scale-110 active:scale-95 backdrop-blur-md shadow-glow-gold">
+            <img src="https://i.ibb.co/qLQcG9vr/Whats-App-Image-2026-08-26-at-11-29-58.jpg" alt="KAAF Marketing Logo" class="w-full h-full object-cover rounded-full">
+        </a>
+    </aside>
+
+    <!-- FLOATING WHATSAPP BUTTON (BOTTOM RIGHT) -->
+    <aside id="floating-wa-btn" class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/" target="_blank" title="تواصل مباشر مع فريق الاستشارات التنفيذية" class="w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center border-2 border-emerald-200/80 animate-floating-kaaf transition-transform hover:scale-110 active:scale-95 shadow-lg">
+            <i class="fa-brands fa-whatsapp text-2xl"></i>
+        </a>
+    </aside>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-20">
+
+        <!-- SECTION 00 — EXECUTIVE HERO OPENING -->
+        <section class="relative rounded-[32px] overflow-hidden p-8 sm:p-14 lg:p-16 bg-gradient-to-br from-kaaf-darkSlate via-kaaf-onyx to-black border border-kaaf-gold/40 shadow-web-card backdrop-blur-xl">
+            <div class="kaaf-luxury-ribbon absolute top-0 left-0 right-0"></div>
+
+            <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div class="lg:col-span-8 space-y-6">
+                    <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-kaaf-gold/15 border border-kaaf-gold/40 text-kaaf-goldLight text-xs font-bold font-ibm">
+                        <i class="fa-solid fa-crown text-kaaf-gold"></i>
+                        <span>وثيقة استراتيجية تنموية موجهة للمالك والإدارة التنفيذية — مكة المكرمة</span>
+                    </div>
+
+                    <div class="space-y-4">
+                        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight font-cairo">
+                            المركز الجديد يملك فرصة استثنائية: <br>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-l from-kaaf-goldLight via-amber-300 to-kaaf-gold">
+                                يبدأ السوق وهو يملك تجربة حقيقية تستحق أن يُحكى عنها.
+                            </span>
+                        </h1>
+                        <p class="text-base sm:text-xl font-medium text-gray-300 leading-relaxed font-cairo">
+                            نحن لا نسوّق لصالون حلاقة جديد... نحن نبني إطلاقاً استراتيجياً لمركز عناية واسترخاء رجالي فاخر، ونحوّل قيمته واحترافيته الميدانية إلى تجربة رقمية يثق بها العميل ويحجزها فوراً.
+                        </p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-black/70 border border-white/10 text-xs sm:text-sm text-gray-300 leading-relaxed font-ibm">
+                        <strong class="text-kaaf-goldLight font-bold">الرؤية التنفيذية:</strong> المشكلة في قطاع الصالونات ومراكز العناية ليست في كثرة العروض... بل في تشابه التجارب وضعف الثقة والاتصال الإعلاني العابر. مهمتنا هي تحويل المستوى الفعلي للمركز إلى حضور رقمي موثوق، وتوجيه الزخم نحو نظام حجوزات وقاعدة عملاء مستدامة.
+                    </div>
+                </div>
+
+                <!-- Right Card KPI Snapshot -->
+                <div class="lg:col-span-4 flex justify-center">
+                    <div class="w-full space-y-4 p-6 rounded-3xl bg-kaaf-cardBg/90 border border-kaaf-gold/40 shadow-glow-gold backdrop-blur-md">
+                        <div class="flex items-center justify-between pb-3 border-b border-white/10">
+                            <span class="text-xs font-black text-white flex items-center gap-2">
+                                <i class="fa-solid fa-spa text-kaaf-gold"></i>
+                                هيكل منظومة الإطلاق
+                            </span>
+                            <span class="text-[10px] px-2 py-0.5 rounded bg-kaaf-gold/20 text-kaaf-goldLight font-mono">MAKKAH SPA</span>
+                        </div>
+
+                        <div class="space-y-3 text-xs">
+                            <div class="p-3 rounded-xl bg-black/60 border border-white/5 flex items-center justify-between">
+                                <span class="text-gray-400">التموضع التجاري</span>
+                                <span class="font-bold text-white">Grooming & Wellness</span>
+                            </div>
+                            <div class="p-3 rounded-xl bg-black/60 border border-white/5 flex items-center justify-between">
+                                <span class="text-gray-400">تغطية المؤثرين</span>
+                                <span class="font-bold text-kaaf-cyanLight">10 Targeted Waves</span>
+                            </div>
+                            <div class="p-3 rounded-xl bg-black/60 border border-white/5 flex items-center justify-between">
+                                <span class="text-gray-400">الموسم الذهبي</span>
+                                <span class="font-bold text-kaaf-goldLight"> شعبان • رمضان • العيد</span>
+                            </div>
+                        </div>
+
+                        <div class="pt-2 text-center">
+                            <a href="#framework" class="block w-full py-2.5 rounded-xl bg-gradient-to-r from-kaaf-gold via-amber-400 to-amber-500 text-slate-950 font-black text-xs hover:brightness-110 shadow-md transition">
+                                استعراض خطة الإطلاق الخماسية
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 01 — EXECUTIVE SUMMARY -->
+        <section id="summary" class="space-y-6">
+            <div class="flex items-center gap-3">
+                <span class="px-3.5 py-1 rounded-full bg-kaaf-gold/20 text-kaaf-goldLight font-black text-xs border border-kaaf-gold/40">01</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide">الملخص التنفيذي (Executive Summary)</h2>
+            </div>
+
+            <div class="web-card-gold p-8 sm:p-10 rounded-3xl space-y-8 shadow-glow-gold">
+                <div class="text-center max-w-3xl mx-auto space-y-2">
+                    <span class="text-xs font-mono font-bold text-kaaf-gold uppercase tracking-widest">Growth Engine Pillars</span>
+                    <h3 class="text-2xl sm:text-3xl font-black text-white">الهدف ليس أن يعرف الناس المركز فقط... بل أن يثقوا ويحجزوا ويرجعوا</h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="p-5 rounded-2xl bg-black/80 border border-kaaf-gold/40 space-y-2 text-center">
+                        <div class="w-10 h-10 rounded-xl bg-kaaf-gold/20 text-kaaf-goldLight flex items-center justify-center font-bold mx-auto text-lg">
+                            <i class="fa-solid fa-rocket"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white">1. Launch</h4>
+                        <p class="text-xs text-gray-300">إطلاق قوي ينقل صورة المكان الحقيقية بجودة بصرية عالية وهوية متماسكة.</p>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-black/80 border border-kaaf-cyan/40 space-y-2 text-center">
+                        <div class="w-10 h-10 rounded-xl bg-kaaf-cyan/20 text-kaaf-cyanLight flex items-center justify-center font-bold mx-auto text-lg">
+                            <i class="fa-solid fa-bullhorn"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white">2. Awareness</h4>
+                        <p class="text-xs text-gray-300">انتشار محلي مكثف في مكة المكرمة مستهدفاً شريحة تبحث عن الخصوصية والجودة.</p>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-black/80 border border-kaaf-emerald/40 space-y-2 text-center">
+                        <div class="w-10 h-10 rounded-xl bg-kaaf-emerald/20 text-kaaf-emeraldLight flex items-center justify-center font-bold mx-auto text-lg">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white">3. Conversion</h4>
+                        <p class="text-xs text-gray-300">تحويل التفاعل والمشاهدات إلى حجوزات مؤكدة عبر الواتساب ونظام المواعيد.</p>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-black/80 border border-kaaf-purple/40 space-y-2 text-center">
+                        <div class="w-10 h-10 rounded-xl bg-kaaf-purple/20 text-kaaf-purpleLight flex items-center justify-center font-bold mx-auto text-lg">
+                            <i class="fa-solid fa-arrows-rotate"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white">4. Retention</h4>
+                        <p class="text-xs text-gray-300">إعادة استهداف ذكية ومتابعة دورية لتحويل الزائر الأول إلى عميل دائم برصيد ولاء.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 02 — THE CORE BUSINESS CHALLENGE -->
+        <section id="challenge" class="space-y-6">
+            <div class="flex items-center gap-3">
+                <span class="px-3.5 py-1 rounded-full bg-kaaf-border text-kaaf-cyanLight font-black text-xs border border-kaaf-cyan/40">02</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide">وش اللي نحتاج نغيره في طريقة تسويق المركز؟</h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Market Challenge Card -->
+                <div class="web-card-dark p-8 rounded-3xl space-y-4">
+                    <div class="flex items-center gap-3 pb-3 border-b border-white/10">
+                        <div class="w-9 h-9 rounded-xl bg-rose-500/20 text-rose-400 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-black text-white">تحدي التسويق التقليدي في قطاع الصالونات</h3>
+                            <p class="text-xs text-gray-400">Why Traditional Marketing Fails</p>
+                        </div>
+                    </div>
+
+                    <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                        العميل اليوم في مكة لا يبحث عن مجرد "قصة شعر"، بل يهرب من الصالونات التقليدية المزدحمة والعشوائية. تسويق الصالونات التقليدي يقتصر على صور عابرة دون إظهار **القيم الفعلية للخدمة**.
+                    </p>
+
+                    <ul class="space-y-2.5 text-xs text-gray-300">
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-xmark text-rose-400 mt-1"></i>
+                            <span>عدم إبراز مستوى النظافة والتعقيم والخصوصية بشكل يطمئن العميل.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-xmark text-rose-400 mt-1"></i>
+                            <span>غياب شفافية الخدمات والباقات وتفاصيل تجربة الإسبا والعناية بالبشرة.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-xmark text-rose-400 mt-1"></i>
+                            <span>ضياع العميل في رحلة الحجز المترددة بسبب غياب الاستجابة السريعة وتذكير المواعيد.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- KAAF Solution Card -->
+                <div class="web-card-gold p-8 rounded-3xl space-y-4">
+                    <div class="flex items-center gap-3 pb-3 border-b border-kaaf-gold/40">
+                        <div class="w-9 h-9 rounded-xl bg-kaaf-gold/20 text-kaaf-goldLight flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-check-double"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-black text-white">منهجيتنا في بناء الثقة وتأكيد الحجز</h3>
+                            <p class="text-xs text-gray-400">High-Intent Experience System</p>
+                        </div>
+                    </div>
+
+                    <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                        سنبني محتوى إثبات ووضوح يُظهر المكان قبل أن يزوره العميل، ونوفر مسار حجز أملس ومباشر مع أتمتة تذكير وإعادة استهداف.
+                    </p>
+
+                    <div class="p-4 rounded-2xl bg-black/60 border border-kaaf-gold/30 text-xs space-y-2">
+                        <div class="font-bold text-kaaf-goldLight">الم معادلة التحويل الأساسية:</div>
+                        <p class="text-gray-300">
+                            عرض الفخامة والتعقيم + إثبات مهارة الخبراء + باقات واضحة + حجز بنقرة واحدة = جدول مواعيد ممتلئ دائماً.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 03 — POSITIONING -->
+        <section id="positioning" class="space-y-6">
+            <div class="flex items-center gap-3">
+                <span class="px-3.5 py-1 rounded-full bg-kaaf-gold/20 text-kaaf-goldLight font-black text-xs border border-kaaf-gold/40">03</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide">التموضع الاستراتيجي (Brand Positioning)</h2>
+            </div>
+
+            <div class="web-card-gold p-8 sm:p-10 rounded-3xl space-y-6">
+                <div class="space-y-3">
+                    <span class="text-xs font-mono font-bold text-kaaf-gold uppercase tracking-wider">From Barber Shop to Luxury Destination</span>
+                    <h3 class="text-2xl font-black text-white">من مجرد صالون حلاقة... إلى وجهة متكاملة للعناية والاسترخاء الرجالي (Grooming & Wellness Destination)</h3>
+                    <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                        سنعيد صياغة حضور المركز أمام مجتمع مكة المكرمة ليرتبط في أذهانهم بمفهوم **الراحة، الخصوصية، العناية الشاملة، والاستعداد التام للمناسبات**.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 text-xs">
+                    <div class="p-4 rounded-2xl bg-black/70 border border-kaaf-gold/30 space-y-2 text-center">
+                        <i class="fa-solid fa-scissors text-kaaf-gold text-xl"></i>
+                        <h4 class="font-bold text-white">Grooming</h4>
+                        <p class="text-[11px] text-gray-400">عناية فائقة بالشعر واللحية بأعلى المعايير.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-black/70 border border-kaaf-cyan/30 space-y-2 text-center">
+                        <i class="fa-solid fa-hot-tub-person text-kaaf-cyan text-xl"></i>
+                        <h4 class="font-bold text-white">Wellness & Spa</h4>
+                        <p class="text-[11px] text-gray-400">خدمات مساج واستجمام وتنظيف بشرة محترف.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-black/70 border border-kaaf-emerald/30 space-y-2 text-center">
+                        <i class="fa-solid fa-couch text-kaaf-emeraldLight text-xl"></i>
+                        <h4 class="font-bold text-white">Experience</h4>
+                        <p class="text-[11px] text-gray-400">ضيافة فاخرة، بيئة مريحة، وهدوء تام.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-black/70 border border-kaaf-purple/30 space-y-2 text-center">
+                        <i class="fa-solid fa-user-shield text-kaaf-purpleLight text-xl"></i>
+                        <h4 class="font-bold text-white">Privacy</h4>
+                        <p class="text-[11px] text-gray-400">جلسات خاصة واستقلالية تضمن راحة العميل.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-black/70 border border-amber-400/30 space-y-2 text-center">
+                        <i class="fa-solid fa-award text-amber-300 text-xl"></i>
+                        <h4 class="font-bold text-white">Professionalism</h4>
+                        <p class="text-[11px] text-gray-400">خبراء متخصصون وأدوات معقمة فردية.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 04 — THE 5-PHASE LAUNCH FRAMEWORK -->
+        <section id="framework" class="space-y-6">
+            <div class="flex items-center gap-3">
+                <span class="px-3.5 py-1 rounded-full bg-kaaf-cyan/20 text-kaaf-cyanLight font-black text-xs border border-kaaf-cyan/40">04</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide">إطار العمل الخماسي للإطلاق (5-Phase Launch Framework)</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 text-xs">
+                <!-- Phase 1 -->
+                <div class="web-card-dark p-5 rounded-2xl space-y-3">
+                    <span class="px-2.5 py-1 rounded bg-kaaf-gold/20 text-kaaf-goldLight font-mono font-bold">Phase 01</span>
+                    <h3 class="text-sm font-bold text-white">Build</h3>
+                    <p class="text-gray-300">تأسيس الهوية الرقمية، ربط Google Business، إعداد مسار الحجز والواتساب، وإنتاج محتوى التأسيس.</p>
+                </div>
+
+                <!-- Phase 2 -->
+                <div class="web-card-dark p-5 rounded-2xl space-y-3">
+                    <span class="px-2.5 py-1 rounded bg-kaaf-cyan/20 text-kaaf-cyanLight font-mono font-bold">Phase 02</span>
+                    <h3 class="text-sm font-bold text-white">Launch</h3>
+                    <p class="text-gray-300">إطلاق فيديو الافتتاح الرسمي، التغطية البصرية للمكان، وإثارة الفضول المحلي في مكة.</p>
+                </div>
+
+                <!-- Phase 3 -->
+                <div class="web-card-dark p-5 rounded-2xl space-y-3">
+                    <span class="px-2.5 py-1 rounded bg-kaaf-emerald/20 text-kaaf-emeraldLight font-mono font-bold">Phase 03</span>
+                    <h3 class="text-sm font-bold text-white">Amplify</h3>
+                    <p class="text-gray-300">تفعيل موجات المشاهير الـ10 + ضخ إعلانات استهداف الجغرافيا والمصالح بالمنطقة.</p>
+                </div>
+
+                <!-- Phase 4 -->
+                <div class="web-card-dark p-5 rounded-2xl space-y-3">
+                    <span class="px-2.5 py-1 rounded bg-kaaf-purple/20 text-kaaf-purpleLight font-mono font-bold">Phase 04</span>
+                    <h3 class="text-sm font-bold text-white">Convert</h3>
+                    <p class="text-gray-300">تحويل التفاعل والمشاهدات إلى حجوزات وباقات عبر العروض المحدودة والرد الآلي.</p>
+                </div>
+
+                <!-- Phase 5 -->
+                <div class="web-card-gold p-5 rounded-2xl space-y-3">
+                    <span class="px-2.5 py-1 rounded bg-amber-400/20 text-amber-300 font-mono font-bold">Phase 05</span>
+                    <h3 class="text-sm font-bold text-white">Retain</h3>
+                    <p class="text-gray-300">إعادة استهداف تاركي الحجز، وتذكير المواعيد، وتقييمات قوقل، وبرامج إعادة الزيارة.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 05 — 10 INFLUENCERS ECOSYSTEM -->
+        <section id="influencers" class="space-y-6">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <span class="px-3.5 py-1 rounded-full bg-kaaf-purple/20 text-kaaf-purpleLight font-black text-xs border border-kaaf-purple/40">05</span>
+                    <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide">منظومة المؤثرين الـ10 (Launch Ecosystem)</h2>
+                </div>
+                <span class="text-xs text-kaaf-purpleLight font-bold hidden sm:inline">موجات استراتيجية متتالية</span>
+            </div>
+
+            <div class="web-card-purple p-8 sm:p-10 rounded-3xl space-y-6">
+                <p class="text-xs sm:text-sm text-gray-200 leading-relaxed font-medium">
+                    لن نتعامل مع المشاهير كـ "إعلانات فردية منفصلة تنتهي بانتهاء السنابة". بل سنوظف **10 مؤثرين** مقسمين على موجات زمنية لتكوين **Social Proof مستمر** يغذي الإعلانات المدفوعة ويعيد استهداف المهتمين.
+                </p>
+
+                <!-- Journey Flow of Influencer Content -->
+                <div class="p-4 rounded-2xl bg-black/70 border border-kaaf-purple/40 text-center space-y-2">
+                    <div class="text-xs font-bold text-kaaf-purpleLight">مسار التغطية المطلوبة من المؤثر (Influencer Experience Journey)</div>
+                    <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-4 font-black text-xs text-white">
+                        <span class="px-3 py-1.5 rounded-lg bg-kaaf-purple/30">الوصول والمكان</span>
+                        <i class="fa-solid fa-arrow-left text-kaaf-purpleLight"></i>
+                        <span class="px-3 py-1.5 rounded-lg bg-kaaf-purple/30">تجربة الخدمة والراحة</span>
+                        <i class="fa-solid fa-arrow-left text-kaaf-purpleLight"></i>
+                        <span class="px-3 py-1.5 rounded-lg bg-kaaf-purple/30">التحول (Transformation)</span>
+                        <i class="fa-solid fa-arrow-left text-kaaf-purpleLight"></i>
+                        <span class="px-3 py-1.5 rounded-lg bg-kaaf-purple/30">الانطباع الصادق</span>
+                        <i class="fa-solid fa-arrow-left text-kaaf-purpleLight"></i>
+                        <span class="px-3 py-1.5 rounded-lg bg-kaaf-gold/30 text-kaaf-goldLight">رابط الحجز المباشر</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs">
+                    <div class="p-5 rounded-2xl bg-black/80 border border-white/10 space-y-2">
+                        <div class="text-kaaf-purpleLight font-bold">الموجة الأولى: التشويق والافتتاح</div>
+                        <h4 class="font-bold text-white">3 مؤثرين (Pre-Launch & Day 1)</h4>
+                        <p class="text-gray-300">تركيز على الفضول، استعراض فخامة الديكور، الإعلان عن الافتتاح، ودعوة لمتابعة الحساب والحجز المبكر.</p>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-black/80 border border-white/10 space-y-2">
+                        <div class="text-kaaf-purpleLight font-bold">الموجة الثانية: تجربة الخدمات العمومية</div>
+                        <h4 class="font-bold text-white">4 مؤثرين (Mid Launch Wave)</h4>
+                        <p class="text-gray-300">تغطية تفصيلية لجلسات الإسبا، المساج، العناية بالبشرة، والبديكير مع استعراض باقات العناية المتكاملة.</p>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-black/80 border border-white/10 space-y-2">
+                        <div class="text-kaaf-purpleLight font-bold">الموجة الثالثة: الاستعداد للموسم والعيد</div>
+                        <h4 class="font-bold text-white">3 مؤثرين (Peak Season Push)</h4>
+                        <p class="text-gray-300">تركيز على التجهيز للعيد والمناسبات، سرعة الحجز عبر الواتساب، وتأكيد حجز المقاعد قبل إغلاق المواعيد.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 06 — CONTENT ENGINE (8 PILLARS) -->
+        <section id="content" class="space-y-6">
+            <div class="flex items-center gap-3">
+                <span class="px-3.5 py-1 rounded-full bg-kaaf-emerald/20 text-kaaf-emeraldLight font-black text-xs border border-kaaf-emerald/40">06</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide">المحتوى اللي يخلي العميل يشوف الفرق قبل لا يزورنا (8 Pillars)</h2>
+            </div>
+
+            <div class="web-card-emerald p-8 sm:p-10 rounded-3xl space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="p-4 rounded-2xl bg-black/80 border border-kaaf-emerald/30 space-y-2">
+                        <span class="text-xs font-mono font-bold text-kaaf-emeraldLight">Pillar 01</span>
+                        <h3 class="text-sm font-bold text-white">The Experience</h3>
+                        <p class="text-xs text-gray-300">استعراض هدوء المكان، الضيافة، والخصوصية. <br><em class="text-gray-400 font-normal">مثال: Reels لرحلة دخول العميل واستقباله.</em></p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-black/80 border border-kaaf-emerald/30 space-y-2">
+                        <span class="text-xs font-mono font-bold text-kaaf-emeraldLight">Pillar 02</span>
+                        <h3 class="text-sm font-bold text-white">The Craft</h3>
+                        <p class="text-xs text-gray-300">دقة الحلاقين والخبراء ومهاراتهم. <br><em class="text-gray-400 font-normal">مثال: فيديو سينمائي قصير لدقة رسم اللحية.</em></p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-black/80 border border-kaaf-emerald/30 space-y-2">
+                        <span class="text-xs font-mono font-bold text-kaaf-emeraldLight">Pillar 03</span>
+                        <h3 class="text-sm font-bold text-white">Transformation</h3>
+                        <p class="text-xs text-gray-300">قبل وبعد بموافقة العميل واحترام خصوصيته. <br><em class="text-gray-400 font-normal">مثال: تحول مظهر العميل قبل مناسبة مهمة.</em></p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-black/80 border border-kaaf-emerald/30 space-y-2">
+                        <span class="text-xs font-mono font-bold text-kaaf-emeraldLight">Pillar 04</span>
+                        <h3 class="text-sm font-bold text-white">Education</h3>
+                        <p class="text-xs text-gray-300">نصائح حقيقية للعناية بالبشرة واللحية. <br><em class="text-gray-400 font-normal">مثال: كيف تختار جلسة تنظيف البشرة المناسبة؟</em></p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-black/80 border border-kaaf-emerald/30 space-y-2">
+                        <span class="text-xs font-mono font-bold text-kaaf-emeraldLight">Pillar 05</span>
+                        <h3 class="text-sm font-bold text-white">Hygiene & Standards</h3>
+                        <p class="text-xs text-gray-300">التعقيم، الأجهزة، والأدوات الفردية. <br><em class="text-gray-400 font-normal">مثال: كواليس فتح مغلف الأدوات المعقمة أمام العميل.</em></p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-black/80 border border-kaaf-emerald/30 space-y-2">
+                        <span class="text-xs font-mono font-bold text-kaaf-emeraldLight">Pillar 06</span>
+                        <h3 class="text-sm font-bold text-white">People & Staff</h3>
+                        <p class="text-xs text-gray-300">تقديم الخبراء وشخصيات الفريق لبناء الألفة. <br><em class="text-gray-400 font-normal">مثال: تعريف بخبير المساج وتخصصه.</em></p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-black/80 border border-kaaf-emerald/30 space-y-2">
+                        <span class="text-xs font-mono font-bold text-kaaf-emeraldLight">Pillar 07</span>
+                        <h3 class="text-sm font-bold text-white">Social Proof</h3>
+                        <p class="text-xs text-gray-300">انطباعات الزوار ومراجعات قوقل والمشاهير. <br><em class="text-gray-400 font-normal">مثال: اقتباس مراجعة عميل حقيقي.</em></p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-black/80 border border-kaaf-emerald/30 space-y-2">
+                        <span class="text-xs font-mono font-bold text-kaaf-emeraldLight">Pillar 08</span>
+                        <h3 class="text-sm font-bold text-white">Offers & Packages</h3>
+                        <p class="text-xs text-gray-300">عرض الباقات والتسهيلات والحجز المباشر. <br><em class="text-gray-400 font-normal">مثال: باقة العريس أو باقة الاسترخاء الشاملة.</em></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 07 — IP PROTECTION POLICY -->
+        <section class="space-y-6">
+            <div class="web-card-gold p-8 rounded-3xl flex flex-col sm:flex-row items-center justify-between gap-6">
+                <div class="space-y-2">
+                    <div class="flex items-center gap-2 text-kaaf-goldLight font-bold text-base">
+                        <i class="fa-solid fa-user-lock text-xl text-kaaf-gold"></i>
+                        <span>سياسة حماية أسرار الصنعة والملكية الفكرية (IP Protection Policy)</span>
+                    </div>
+                    <p class="text-xs text-gray-300 leading-relaxed max-w-3xl">
+                        <strong>نوري العميل جودة الشغل... بدون ما نكشف أسرار الشغل.</strong> سيتم التركيز في التصوير والمحتوى على الدقة، الأناقة، النظافة، والنتيجة النهائية، دون عرض أي تركيبة خاصة أو خطوات تشغيلية تعتبر ملكية فكرية وحصرية للمركز.
+                    </p>
+                </div>
+                <span class="px-4 py-2 rounded-xl bg-kaaf-gold/20 text-kaaf-goldLight font-black text-xs border border-kaaf-gold/40 shrink-0">
+                    ضمان الخصوصية والاحتراف
+                </span>
+            </div>
+        </section>
+
+        <!-- SECTION 08 — PAID ADS STRATEGY -->
+        <section id="ads" class="space-y-6">
+            <div class="flex items-center gap-3">
+                <span class="px-3.5 py-1 rounded-full bg-kaaf-cyan/20 text-kaaf-cyanLight font-black text-xs border border-kaaf-cyan/40">08</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide">الحملات الإعلانية الموجهة (Full-Funnel Paid Ads)</h2>
+            </div>
+
+            <div class="web-card-dark p-8 sm:p-10 rounded-3xl space-y-6">
+                <p class="text-xs sm:text-sm text-gray-200 leading-relaxed font-medium">
+                    استراتيجية إعلانات مبنية على قمع تحويل محكم لاستخراج أقصى عائد من ميزانية الإعلانات على منصات (Snapchat, TikTok, Meta / Instagram) المستهدفة لسكان وزوار مكة المكرمة.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-xs">
+                    <div class="p-5 rounded-2xl bg-black/80 border border-kaaf-cyan/30 space-y-2">
+                        <div class="text-kaaf-cyanLight font-bold">1. Awareness</div>
+                        <h3 class="text-sm font-bold text-white">الوصول الجغرافي المباشر</h3>
+                        <p class="text-gray-300">استهداف الأحياء الراقية والمناطق القريبة في مكة للتعريف بالمركز وافتتاحه.</p>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-black/80 border border-kaaf-cyan/30 space-y-2">
+                        <div class="text-kaaf-cyanLight font-bold">2. Consideration</div>
+                        <h3 class="text-sm font-bold text-white">استعراض التجربة والباقات</h3>
+                        <p class="text-gray-300">عرض فيديوهات تجارب الخبراء والإسبا لتغذية اهتمام العميل وجعله يفكر بالحجز.</p>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-black/80 border border-kaaf-cyan/30 space-y-2">
+                        <div class="text-kaaf-cyanLight font-bold">3. Conversion</div>
+                        <h3 class="text-sm font-bold text-white">الحجز والواتساب المباشر</h3>
+                        <p class="text-gray-300">توجيه ذوي النية العالية مباشرة لرابط الحجز أو محادثة الواتساب لتأكيد الموعد.</p>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-black/80 border border-kaaf-gold/40 space-y-2 bg-kaaf-gold/10">
+                        <div class="text-kaaf-goldLight font-bold">4. Retargeting</div>
+                        <h3 class="text-sm font-bold text-white">إعادة استهداف المهتمين</h3>
+                        <p class="text-gray-300">إعادة الوصول لمن شاهد الفيديوهات، دخل رابط الحجز ولم يكمل، أو تفاعل مع الحساب.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 09 — GOOGLE & LOCAL SEARCH -->
+        <section id="local-seo" class="space-y-6">
+            <div class="flex items-center gap-3">
+                <span class="px-3.5 py-1 rounded-full bg-kaaf-emerald/20 text-kaaf-emeraldLight font-black text-xs border border-kaaf-emerald/40">09</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide">Google Maps & Local Search (الحضور المحلي في مكة)</h2>
+            </div>
+
+            <div class="web-card-emerald p-8 sm:p-10 rounded-3xl space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                    <div class="space-y-3">
+                        <h3 class="text-xl font-bold text-white">العميل الذي يبحث في قوقل يملك "نية حجز عالية جدًا"</h3>
+                        <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                            عندما يبحث رجل في مكة عن "أفضل صالون حلاقة رجالي" أو "مساج وإسبا رجالي مكة"، يجب أن يظهر مركزنا في أول نتائج الخريطة بملف متكامل يبعث على الثقة الفورية.
+                        </p>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-black/80 border border-kaaf-emerald/40 space-y-2 text-xs">
+                        <div class="font-bold text-kaaf-emeraldLight mb-2">خطة تهيئة Google Business Profile:</div>
+                        <ul class="space-y-1.5 text-gray-300">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-kaaf-emeraldLight"></i> <span>رفع صور احترافية عالية الجودة للمكان والديكور.</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-kaaf-emeraldLight"></i> <span>تنظيم قائمة الخدمات والباقات والتسعير المحدث.</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-kaaf-emeraldLight"></i> <span>ربط زر الحجز المباشر برابط الواتساب أو النظام.</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-kaaf-emeraldLight"></i> <span>تحفيز المراجعات والتقييمات الإيجابية (Reviews Strategy).</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 10 — WHATSAPP AUTOMATION & CRM -->
+        <section id="automation" class="space-y-6">
+            <div class="flex items-center gap-3">
+                <span class="px-3.5 py-1 rounded-full bg-kaaf-purple/20 text-kaaf-purpleLight font-black text-xs border border-kaaf-purple/40">10</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide">من الإعلان إلى الحجز... بدون ما يضيع العميل في النص</h2>
+            </div>
+
+            <div class="web-card-purple p-8 sm:p-10 rounded-3xl space-y-6">
+                <div class="space-y-2">
+                    <h3 class="text-xl font-bold text-white">رحلة الحجز وأتمتة المتابعة (Frictionless Booking Journey)</h3>
+                    <p class="text-xs text-gray-300">تسريع الاستجابة وتسهيل حجز المواعيد وتقليل نسبة عدم الحضور (No-Show Rate)</p>
+                </div>
+
+                <!-- Step-by-Step Horizontal Funnel -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2 text-center text-xs">
+                    <div class="p-3 rounded-xl bg-black/70 border border-kaaf-purple/30 space-y-1">
+                        <span class="text-kaaf-purpleLight font-mono text-[10px]">01</span>
+                        <div class="font-bold text-white">Ad / Post</div>
+                    </div>
+                    <div class="p-3 rounded-xl bg-black/70 border border-kaaf-purple/30 space-y-1">
+                        <span class="text-kaaf-purpleLight font-mono text-[10px]">02</span>
+                        <div class="font-bold text-white">WhatsApp</div>
+                    </div>
+                    <div class="p-3 rounded-xl bg-black/70 border border-kaaf-purple/30 space-y-1">
+                        <span class="text-kaaf-purpleLight font-mono text-[10px]">03</span>
+                        <div class="font-bold text-white">Select Service</div>
+                    </div>
+                    <div class="p-3 rounded-xl bg-black/70 border border-kaaf-purple/30 space-y-1">
+                        <span class="text-kaaf-purpleLight font-mono text-[10px]">04</span>
+                        <div class="font-bold text-white">Confirm Time</div>
+                    </div>
+                    <div class="p-3 rounded-xl bg-black/70 border border-kaaf-purple/30 space-y-1">
+                        <span class="text-kaaf-purpleLight font-mono text-[10px]">05</span>
+                        <div class="font-bold text-white">Reminder</div>
+                    </div>
+                    <div class="p-3 rounded-xl bg-black/70 border border-kaaf-purple/30 space-y-1">
+                        <span class="text-kaaf-purpleLight font-mono text-[10px]">06</span>
+                        <div class="font-bold text-white">Visit & Service</div>
+                    </div>
+                    <div class="p-3 rounded-xl bg-black/70 border border-kaaf-purple/30 space-y-1">
+                        <span class="text-kaaf-purpleLight font-mono text-[10px]">07</span>
+                        <div class="font-bold text-white">Review</div>
+                    </div>
+                    <div class="p-3 rounded-xl bg-kaaf-gold/30 border border-kaaf-gold text-kaaf-goldLight space-y-1">
+                        <span class="text-amber-300 font-mono text-[10px]">08</span>
+                        <div class="font-bold">Rebooking</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 11 — SEASONALITY TIMELINE -->
+        <section id="seasonality" class="space-y-6">
+            <div class="flex items-center gap-3">
+                <span class="px-3.5 py-1 rounded-full bg-kaaf-gold/20 text-kaaf-goldLight font-black text-xs border border-kaaf-gold/40">11</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide">الجدول الزمني للأنشطة والترويج (شعبان • رمضان • العيد)</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 text-xs">
+                <div class="web-card-dark p-5 rounded-2xl space-y-2">
+                    <span class="text-kaaf-goldLight font-bold block font-mono">Sha'ban</span>
+                    <h3 class="font-bold text-white">Launch & Pre-Booking</h3>
+                    <p class="text-gray-300">الافتتاح الرسمي، الموجة الأولى للمؤثرين، إعلانات التعريف، وبدء فتح الحجوزات المبكرة.</p>
+                </div>
+
+                <div class="web-card-dark p-5 rounded-2xl space-y-2">
+                    <span class="text-kaaf-goldLight font-bold block font-mono">Early Ramadan</span>
+                    <h3 class="font-bold text-white">Spa & Relaxation Focus</h3>
+                    <p class="text-gray-300">التركيز على جلسات الاسترخاء والمساج والعناية بالبشرة بعد الإفطار وتوفير أوقات مريحة.</p>
+                </div>
+
+                <div class="web-card-dark p-5 rounded-2xl space-y-2">
+                    <span class="text-kaaf-goldLight font-bold block font-mono">Mid Ramadan</span>
+                    <h3 class="font-bold text-white">Retargeting & Packages</h3>
+                    <p class="text-gray-300">إعادة استهداف المهتمين، إطلاق باقات العناية بالبشرة واللحية، والتحضير لموسم العيد.</p>
+                </div>
+
+                <div class="web-card-gold p-5 rounded-2xl space-y-2">
+                    <span class="text-amber-300 font-bold block font-mono">Late Ramadan</span>
+                    <h3 class="font-bold text-white">Peak Booking Push</h3>
+                    <p class="text-gray-300">ذروة الحجوزات لتجهيزات العيد، موجة المؤثرين الثالثة، وإعلانات "احجز مقعدك قبل الاكتفاء".</p>
+                </div>
+
+                <div class="web-card-emerald p-5 rounded-2xl space-y-2">
+                    <span class="text-kaaf-emeraldLight font-bold block font-mono">Post-Eid</span>
+                    <h3 class="font-bold text-white">Retention & Reviews</h3>
+                    <p class="text-gray-300">جمع التقييمات، تفعيل برنامج إعادة الحجز، وإعادة استهداف العملاء للزيارات الدورية.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 12 — EXPERIENCE PACKAGES -->
+        <section id="packages" class="space-y-6">
+            <div class="flex items-center gap-3">
+                <span class="px-3.5 py-1 rounded-full bg-kaaf-gold/20 text-kaaf-goldLight font-black text-xs border border-kaaf-gold/40">12</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide">استراتيجية تحويل الخدمات إلى "باقات تجارب" (Experience Packages)</h2>
+            </div>
+
+            <div class="web-card-gold p-8 sm:p-10 rounded-3xl space-y-6">
+                <p class="text-xs sm:text-sm text-gray-200 leading-relaxed font-medium">
+                    بدل بيع كل خدمة منفردة بأسلوب تقليدي، سنقوم بتجميع الخدمات المتكاملة في **باقات تجارب حصرية** لرفع متوسط قيمة الحجز (AOV) وتسهيل قرار الشراء لدى العميل:
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs">
+                    <div class="p-5 rounded-2xl bg-black/80 border border-kaaf-gold/40 space-y-2">
+                        <div class="text-kaaf-goldLight font-bold flex items-center justify-between">
+                            <span>باقة الاسترخاء الشاملة</span>
+                            <i class="fa-solid fa-spa"></i>
+                        </div>
+                        <p class="text-gray-300">جلسة مساج + حمام بخار + عناية بالبشرة + ضيافة خاصة لتهدئة الجسم واستعادة النشاط.</p>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-black/80 border border-kaaf-gold/40 space-y-2">
+                        <div class="text-kaaf-goldLight font-bold flex items-center justify-between">
+                            <span>باقة العريس والمناسبات</span>
+                            <div class="flex items-center gap-1">
+                                <i class="fa-solid fa-crown text-amber-300"></i>
+                                <i class="fa-solid fa-star text-amber-300"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-300">عناية فائقة متكاملة: شعر، لحية، تنظيف بشرة بدقة، بديكير، واستعداد كامل لليوم المميّز.</p>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-black/80 border border-kaaf-gold/40 space-y-2">
+                        <div class="text-kaaf-goldLight font-bold flex items-center justify-between">
+                            <span>باقة العناية الشهرية الدورية</span>
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+                        <p class="text-gray-300">اشتراك أو باقة زيارات مخصصة للحفاظ على النظافة والمظهر بشكل دائم ومريح.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 13 — KPI MEASUREMENT DASHBOARD -->
+        <section id="kpi" class="space-y-6">
+            <div class="flex items-center gap-3">
+                <span class="px-3.5 py-1 rounded-full bg-kaaf-emerald/20 text-kaaf-emeraldLight font-black text-xs border border-kaaf-emerald/40">13</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide">إطار قياس الأداء التجاري (Executive KPI Dashboard)</h2>
+            </div>
+
+            <div class="web-card-emerald p-8 sm:p-10 rounded-3xl space-y-6">
+                <p class="text-xs sm:text-sm text-gray-200 font-medium">
+                    المشاهدات والوصول هي مجرد وسائل... المؤشرات الرئيسية التي سنقيس بها النجاح هي مؤشرات تجارية فعلية تمس الحجوزات والإيراد:
+                </p>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 text-center">
+                    <div class="p-4 rounded-2xl bg-black/80 border border-kaaf-emerald/40 space-y-1">
+                        <span class="text-[10px] text-gray-400 block font-mono">REACH & VIEWS</span>
+                        <span class="text-xs font-bold text-white">الوصول والمشاهدات</span>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-black/80 border border-kaaf-emerald/40 space-y-1">
+                        <span class="text-[10px] text-gray-400 block font-mono">COST PER BOOKING</span>
+                        <span class="text-xs font-bold text-kaaf-emeraldLight">تكلفة الحجز المؤكد</span>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-black/80 border border-kaaf-emerald/40 space-y-1">
+                        <span class="text-[10px] text-gray-400 block font-mono">BOOKING RATE</span>
+                        <span class="text-xs font-bold text-white">معدل تحويل الزوار</span>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-black/80 border border-kaaf-emerald/40 space-y-1">
+                        <span class="text-[10px] text-gray-400 block font-mono">AVERAGE ORDER VALUE</span>
+                        <span class="text-xs font-bold text-kaaf-goldLight">متوسط قيمة الفاتورة</span>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-black/80 border border-kaaf-emerald/40 space-y-1">
+                        <span class="text-[10px] text-gray-400 block font-mono">REPEAT BOOKING RATE</span>
+                        <span class="text-xs font-bold text-kaaf-cyanLight">معدل إعادة الزيارة</span>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-black/80 border border-kaaf-emerald/40 space-y-1">
+                        <span class="text-[10px] text-gray-400 block font-mono">ATTRIBUTED REVENUE</span>
+                        <span class="text-xs font-bold text-emerald-300">الإيراد المباشر للحملات</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 14 — WHY KAAF IS DIFFERENT -->
+        <section id="why-us" class="space-y-6">
+            <div class="flex items-center gap-3">
+                <span class="px-3.5 py-1 rounded-full bg-kaaf-gold/20 text-kaaf-goldLight font-black text-xs border border-kaaf-gold/40">14</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide">لماذا KAAF Launch Advisory؟</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Traditional Agency -->
+                <div class="p-8 rounded-3xl bg-rose-950/20 border border-rose-500/30 space-y-4">
+                    <div class="flex items-center gap-3 pb-3 border-b border-rose-500/30">
+                        <i class="fa-solid fa-xmark text-rose-400 text-xl"></i>
+                        <h3 class="text-lg font-black text-white">الشركات والتنفيذ التقليدي</h3>
+                    </div>
+                    <ul class="space-y-3 text-xs text-gray-300">
+                        <li>• تبيع عدد منشورات وتصاميم ثابتة دون ربطها بالحجوزات.</li>
+                        <li>• تصرف ميزانية المشاهير في يوم واحد وتفقد الزخم فوراً.</li>
+                        <li>• تنتهي مسؤوليتها عند جلب المشاهدات دون أتمتة الرد والمتابعة.</li>
+                        <li>• لا تمتلك رؤية شاملة لربط التسويق الميداني بنظام الحجز والـ CRM.</li>
+                    </ul>
+                </div>
+
+                <!-- KAAF Approach -->
+                <div class="web-card-gold p-8 rounded-3xl space-y-4">
+                    <div class="flex items-center gap-3 pb-3 border-b border-kaaf-gold/40">
+                        <i class="fa-solid fa-check text-kaaf-goldLight text-xl"></i>
+                        <h3 class="text-lg font-black text-white">منهجية KAAF كشريك نمو وإطلاق</h3>
+                    </div>
+                    <ul class="space-y-3 text-xs text-gray-200">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-kaaf-gold"></i> <span>فريق مخصص يمسك الصورة كاملة: استراتيجية + إنتاج + إعلانات + أتمتة.</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-kaaf-gold"></i> <span>توزيع استراتيجي للمؤثرين الـ10 على موجات تخدم قمع التحويل.</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-kaaf-gold"></i> <span>تركيز كامل على الحجوزات المؤكدة ومعدل إعادة الزيارة (Retention).</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-kaaf-gold"></i> <span>بناء أصول رقمية مستدامة (Google Maps, Database, Automations).</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 15 — 3-MONTH EXECUTION ROADMAP -->
+        <section id="roadmap" class="space-y-6">
+            <div class="flex items-center gap-3">
+                <span class="px-3.5 py-1 rounded-full bg-kaaf-gold/20 text-kaaf-goldLight font-black text-xs border border-kaaf-gold/40">15</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide">خارطة الطريق التنفيذية لـ 3 أشهر (3-Month Roadmap)</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Month 1 -->
+                <div class="web-card-dark p-6 rounded-3xl space-y-3 border-t-4 border-t-kaaf-gold">
+                    <span class="px-3 py-1 rounded-full bg-kaaf-gold/20 text-kaaf-goldLight font-mono text-xs font-bold">Month 01</span>
+                    <h3 class="text-base font-bold text-white">Launch Foundation</h3>
+                    <p class="text-xs text-gray-300 leading-relaxed">
+                        تجهيز الحسابات الرسمية، تهيئة Google Business Profile، إنتاج محتوى التأسيس الفاخر، تجهيز أتمتة الواتساب ومسار الحجز، إطلاق الموجة الأولى للمؤثرين، وإطلاق حملات التعريف المحلية.
+                    </p>
+                </div>
+
+                <!-- Month 2 -->
+                <div class="web-card-dark p-6 rounded-3xl space-y-3 border-t-4 border-t-kaaf-cyan">
+                    <span class="px-3 py-1 rounded-full bg-kaaf-cyan/20 text-kaaf-cyanLight font-mono text-xs font-bold">Month 02</span>
+                    <h3 class="text-base font-bold text-white">Growth & Optimization</h3>
+                    <p class="text-xs text-gray-300 leading-relaxed">
+                        تحليل بيانات الإعلانات الأولى، إطلاق الموجة الثانية للمؤثرين، تفعيل حملات إعادة الاستهداف (Retargeting)، تحسين أداء باقات الاسترخاء والإسبا، ودفع الحجوزات لموسم رمضان والعيد.
+                    </p>
+                </div>
+
+                <!-- Month 3 -->
+                <div class="web-card-gold p-6 rounded-3xl space-y-3 border-t-4 border-t-amber-400">
+                    <span class="px-3 py-1 rounded-full bg-amber-400/20 text-amber-300 font-mono text-xs font-bold">Month 03</span>
+                    <h3 class="text-base font-bold text-white">Conversion & Retention</h3>
+                    <p class="text-xs text-gray-300 leading-relaxed">
+                        تكثيف الحملات الموجهة لحجوزات العيد، تفعيل برامج تذكير المواعيد المباشرة، جمع مراجعات قوقل من العملاء الحقيقيين، تحليل معدل إعادة الحجز، ووضع خطة النمو المستدام.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 16 — INVESTMENT FRAMEWORK -->
+        <section id="investment" class="space-y-6">
+            <div class="flex items-center gap-3">
+                <span class="px-3.5 py-1 rounded-full bg-kaaf-gold/20 text-kaaf-goldLight font-black text-xs border border-kaaf-gold/40">16</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide">هيكل الاستثمار والمدفوعات (Investment Structure)</h2>
+            </div>
+
+            <div class="web-card-gold p-8 sm:p-10 rounded-3xl space-y-6">
+                <div class="space-y-2">
+                    <h3 class="text-xl font-bold text-white">جدول الدفعات التنفيذية المعتمدة</h3>
+                    <p class="text-xs text-gray-300">يتم سداد الاستثمار التجاري لإدارة الإطلاق والنمو على 3 مراحل تشغيلية (ميزانية الإعلانات والمؤثرين تُدار بشكل منفصل):</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs">
+                    <div class="p-5 rounded-2xl bg-black/80 border border-kaaf-gold/40 space-y-2 text-center">
+                        <span class="px-3 py-1 rounded-full bg-kaaf-gold/20 text-kaaf-goldLight font-bold">الدفعة الأولى — 50%</span>
+                        <h4 class="font-bold text-white text-sm">عند توقيع العقد وبداية التأسيس</h4>
+                        <p class="text-gray-400">تغطية تجهيز الحسابات، إنتاج المحتوى الأساسي، تهيئة الخرائط، وأتمتة مسارات الحجز.</p>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-black/80 border border-white/10 space-y-2 text-center">
+                        <span class="px-3 py-1 rounded-full bg-white/10 text-white font-bold">الدفعة الثانية — 25%</span>
+                        <h4 class="font-bold text-white text-sm">بداية الشهر الثاني</h4>
+                        <p class="text-gray-400">تغطية إدارة موجات النمو وإعادة الاستهداف وتحسين الحملات ودعم موسم رمضان.</p>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-black/80 border border-white/10 space-y-2 text-center">
+                        <span class="px-3 py-1 rounded-full bg-white/10 text-white font-bold">الدفعة الثالثة — 25%</span>
+                        <h4 class="font-bold text-white text-sm">بداية الشهر الثالث</h4>
+                        <p class="text-gray-400">تغطية ذروة العيد وإدارة برامج إعادة الزيارة (Retention) والتقارير النهائية.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 17 — EXECUTIVE CLOSING -->
+        <section id="closing" class="relative rounded-[32px] overflow-hidden p-8 sm:p-14 bg-gradient-to-br from-kaaf-darkSlate via-kaaf-onyx to-black border border-kaaf-gold/50 text-center space-y-8 shadow-web-card">
+            <div class="kaaf-luxury-ribbon absolute top-0 left-0 right-0"></div>
+
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="w-16 h-16 rounded-2xl overflow-hidden border-2 border-kaaf-gold shadow-glow-gold mx-auto p-0.5 bg-black">
+                    <img src="https://i.ibb.co/qLQcG9vr/Whats-App-Image-2026-08-26-at-11-29-58.jpg" alt="KAAF Marketing Logo" class="w-full h-full object-cover rounded-xl">
+                </div>
+
+                <h3 class="text-2xl sm:text-4xl font-black text-white font-cairo">
+                    الافتتاح لحظة... <br>
+                    <span class="text-kaaf-goldLight">لكن العلامة التجارية تُبنى من كل تجربة بعدها.</span>
+                </h3>
+
+                <p class="text-xs sm:text-base text-gray-300 leading-relaxed font-ibm">
+                    هدفنا أن يبدأ المركز بضجة محترفة في مكة المكرمة، والأهم أن يستمر الطلب وتستمر الحجوزات بعد هذه الضجة ضمن منظومة نمو مستدامة.
+                </p>
+            </div>
+
+            <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://kaafmarketing.sa/" target="_blank" class="px-8 py-4 rounded-2xl bg-gradient-to-r from-kaaf-gold via-amber-400 to-amber-500 hover:brightness-110 text-slate-950 font-black text-xs shadow-glow-gold flex items-center gap-3 transition-transform hover:-translate-y-0.5">
+                    <span>جاهزون لبناء خطة الإطلاق وتأسيس الحجوزات</span>
+                    <i class="fa-solid fa-arrow-left text-[10px]"></i>
+                </a>
+            </div>
+
+            <div class="pt-8 border-t border-white/10 text-xs text-gray-400 flex flex-col sm:flex-row items-center justify-between gap-2">
+                <span>وثيقة استراتيجية إطلاق تنموية معتمدة • KAAF Launch Advisory</span>
+                <span>المملكة العربية السعودية — مكة المكرمة</span>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- INTERACTIVE HTML5 CANVAS BACKDROP SCRIPT -->
+    <script>
+        (function() {
+            const canvas = document.getElementById('interactive-bg-canvas');
+            const ctx = canvas.getContext('2d');
+
+            let width, height;
+            let particles = [];
+            const particleCount = 38;
+            const colors = ['#D4AF37', '#06B6D4', '#059669', '#7C3AED'];
+
+            let mouse = { x: null, y: null, radius: 140 };
+
+            function resize() {
+                width = canvas.width = window.innerWidth;
+                height = canvas.height = window.innerHeight;
+            }
+
+            window.addEventListener('resize', resize);
+            window.addEventListener('mousemove', function(e) {
+                mouse.x = e.clientX;
+                mouse.y = e.clientY;
+            });
+            window.addEventListener('mouseout', function() {
+                mouse.x = null;
+                mouse.y = null;
+            });
+
+            class Particle {
+                constructor() {
+                    this.x = Math.random() * width;
+                    this.y = Math.random() * height;
+                    this.vx = (Math.random() - 0.5) * 0.6;
+                    this.vy = (Math.random() - 0.5) * 0.6;
+                    this.radius = Math.random() * 2 + 1;
+                    this.color = colors[Math.floor(Math.random() * colors.length)];
+                    this.baseAlpha = Math.random() * 0.35 + 0.2;
+                }
+
+                update() {
+                    this.x += this.vx;
+                    this.y += this.vy;
+
+                    if (this.x < 0 || this.x > width) this.vx *= -1;
+                    if (this.y < 0 || this.y > height) this.vy *= -1;
+
+                    if (mouse.x !== null && mouse.y !== null) {
+                        let dx = mouse.x - this.x;
+                        let dy = mouse.y - this.y;
+                        let distance = Math.sqrt(dx * dx + dy * dy);
+                        if (distance < mouse.radius) {
+                            let force = (mouse.radius - distance) / mouse.radius;
+                            let directionX = (dx / distance) * force * 2.5;
+                            let directionY = (dy / distance) * force * 2.5;
+                            this.x -= directionX;
+                            this.y -= directionY;
+                        }
+                    }
+                }
+
+                draw() {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = this.color;
+                    ctx.globalAlpha = this.baseAlpha;
+                    ctx.fill();
+                }
+            }
+
+            function init() {
+                resize();
+                particles = [];
+                for (let i = 0; i < particleCount; i++) {
+                    particles.push(new Particle());
+                }
+            }
+
+            function connect() {
+                const maxDistance = 130;
+                for (let a = 0; a < particles.length; a++) {
+                    for (let b = a + 1; b < particles.length; b++) {
+                        let dx = particles[a].x - particles[b].x;
+                        let dy = particles[a].y - particles[b].y;
+                        let distance = Math.sqrt(dx * dx + dy * dy);
+
+                        if (distance < maxDistance) {
+                            let opacity = (1 - (distance / maxDistance)) * 0.2;
+                            ctx.beginPath();
+                            ctx.moveTo(particles[a].x, particles[a].y);
+                            ctx.lineTo(particles[b].x, particles[b].y);
+                            ctx.strokeStyle = '#D4AF37';
+                            ctx.globalAlpha = opacity;
+                            ctx.lineWidth = 0.8;
+                            ctx.stroke();
+                        }
+                    }
+                }
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, width, height);
+                ctx.globalAlpha = 1;
+
+                for (let i = 0; i < particles.length; i++) {
+                    particles[i].update();
+                    particles[i].draw();
+                }
+                connect();
+
+                requestAnimationFrame(animate);
+            }
+
+            window.onload = function() {
+                init();
+                animate();
+            };
+        })();
+    </script>
+</body>
+</html>
